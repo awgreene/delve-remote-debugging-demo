@@ -15,9 +15,9 @@ $ kubectl create cluster
 # Deploy the pod
 $ kubectl apply -f deploy
 
-# Expose the ports, must be done in their own terminals or ran as background process
-$ kubectl port-forward pods/delve-demo 40000:40000 # used for delve connections
-$ kubectl port-forward pods/delve-demo 8000:8000 # serves "hello, world!"
+# Expose the delve endpoint at port 40000, expose "hello, world!" endpoint at port 8000.
+# Must be ran in its own terminal or as a background process.
+$ kubectl port-forward pods/delve-demo 8000:8000 40000:40000
 ```
 
 ## Configure VS Code to connect to the exposed delve port
