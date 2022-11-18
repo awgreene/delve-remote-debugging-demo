@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: delve-demo
+  labels:
+    name: delve-demo
+spec:
+  containers:
+  - name: delve-demo
+    image: quay.io/agreene/delve-remote-debugging-demo:v0.0.1
