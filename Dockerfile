@@ -15,8 +15,7 @@ FROM debian:buster
 EXPOSE 8000 40000
 
 WORKDIR /
-COPY --from=build-env /go/bin/dlv /
-COPY --from=build-env /dockerdev /dockerdev/
+COPY --from=build-env /go/bin/dlv /dlv
 COPY --from=build-env /server /
 
 CMD ["/dlv", "--listen=:40000", "--continue", "--headless=true", "--api-version=2", "--accept-multiclient", "--log", "exec", "/server"]
