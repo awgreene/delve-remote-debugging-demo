@@ -7,7 +7,7 @@
 ## Create a kind cluster
 
 ```bash
-$ kubectl create cluster
+$ kind create cluster
 ```
 
 ## Install the pod and expose the ports
